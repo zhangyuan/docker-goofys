@@ -7,7 +7,7 @@ WORKDIR /build
 RUN git clone https://github.com/kahing/goofys && \
   cd goofys && git checkout 829d8e5
 
-RUN make build
+RUN pwd && cd goofys && make build
 
 FROM alpine:3.16.2
 RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
