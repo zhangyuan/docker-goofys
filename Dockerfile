@@ -4,7 +4,7 @@ RUN apk add git make
 
 WORKDIR /build
 
-RUN git clone git@github.com:kahing/goofys.git && \
+RUN git clone https://github.com/kahing/goofys && \
   cd goofys && git chekout 829d8e5
 
 RUN make build
