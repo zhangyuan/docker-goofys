@@ -11,5 +11,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker tag zhangyuan/goofys:latest
+      - run: docker tag goofys zhangyuan/goofys:latest
       - run: docker push zhangyuan/goofys:latest
