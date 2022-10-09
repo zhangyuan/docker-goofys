@@ -12,7 +12,7 @@ RUN pwd && cd goofys && make build
 FROM alpine:3.16.2
 RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 
-RUN apk add --no-cache tini
+RUN apk add --no-cache tini fuse
 
 ARG USER=default
 ENV HOME /home/$USER
